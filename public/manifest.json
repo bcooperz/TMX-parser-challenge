@@ -1,0 +1,6 @@
+{
+  "short_name": "Math Parser",
+  "name": "Mathematical Function Parser",
+  "start_url": ".",
+  "display": "standalone"
+}
