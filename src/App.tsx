@@ -31,19 +31,28 @@ const App: React.FC = () => {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Mathematical Function Parser</h1>
-      <input
-        type="text"
-        value={input}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setInput(e.target.value)
-        }
-        placeholder="Enter expression..."
-        style={{ width: "350px", padding: "10px", marginBottom: "10px" }}
-      />
-      <button onClick={handleParse} style={{ padding: "10px 20px" }}>
-        Parse
-      </button>
+      <div style={{ width: "400px" }}>
+        <h1>TMX Function Parser</h1>
+        <div style={{ display: "flex", alignItems: "" }}>
+          <input
+            type="text"
+            value={input}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setInput(e.target.value)
+            }
+            placeholder="Enter function.."
+            style={{
+              width: "250px",
+              height: "100%",
+              margin: "0 10px 0 0",
+              padding: "10px",
+            }}
+          />
+          <button onClick={handleParse} style={{ padding: "10px 20px" }}>
+            Submit
+          </button>
+        </div>
+      </div>
       <div
         style={{
           marginTop: "20px",
