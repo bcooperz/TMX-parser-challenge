@@ -8,8 +8,8 @@ const testMathExpression = async (
 ): Promise<void> => {
   render(<App />);
 
-  const input = screen.getByPlaceholderText("Enter expression...");
-  const button = screen.getByText("Parse");
+  const input = screen.getByPlaceholderText("Enter function..");
+  const button = screen.getByText("Submit");
 
   fireEvent.change(input, { target: { value: expression } });
   fireEvent.click(button);
@@ -27,8 +27,8 @@ const testMathExpressionError = async (
 ): Promise<void> => {
   render(<App />);
 
-  const input = screen.getByPlaceholderText("Enter expression...");
-  const button = screen.getByText("Parse");
+  const input = screen.getByPlaceholderText("Enter function..");
+  const button = screen.getByText("Submit");
 
   fireEvent.change(input, { target: { value: expression } });
   fireEvent.click(button);
@@ -145,8 +145,8 @@ describe("Math Parser Tests", () => {
     test("should clear input and show new result for different expressions", async () => {
       render(<App />);
 
-      const input = screen.getByPlaceholderText("Enter expression...");
-      const button = screen.getByText("Parse");
+      const input = screen.getByPlaceholderText("Enter function..");
+      const button = screen.getByText("Submit");
 
       // Test first expression
       fireEvent.change(input, { target: { value: "2 + 2 = 4" } });
